@@ -1,0 +1,8 @@
+Terraform is being used to provision the AWS Managed Grafana Service.
+TWo folders are included under Terraform, the Grafana Workspace and Grafana Dashboard. 
+Workspace is provisioned using Terraform.
+Variables, Providers, Main and Backend tf files are kept separate.
+The tfstate file is stored inside s3 bucket.
+The yaml file templates are used both both workspace creation and importing dashboards.
+Amazon CloudWatch Logs JSON file from grafana-dashboards is the source of pre-built dashboards..
+More json files can be imported at later staged to create more dashboards
