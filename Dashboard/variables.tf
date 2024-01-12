@@ -1,4 +1,4 @@
-#Define AWS Region
+
 variable "region" {
   description = "Infrastructure region"
   type        = string
