@@ -1,4 +1,3 @@
-# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/grafana_workspace
 resource "aws_grafana_workspace" "workspace" {
   name                     = "project-3"
   account_access_type      = "CURRENT_ACCOUNT"
