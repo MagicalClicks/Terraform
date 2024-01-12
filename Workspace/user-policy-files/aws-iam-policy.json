@@ -1,0 +1,52 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PermissionsForGrafanaAndIAMIdentityCenter",
+            "Effect": "Allow",
+            "Action": [
+                "grafana:*",
+                "sso:AssociateProfile",
+                "sso:CreateManagedApplicationInstance",
+                "sso:DeleteManagedApplicationInstance",
+                "sso:DescribeRegisteredRegions",
+                "sso:DisassociateProfile",
+                "sso:GetManagedApplicationInstance",
+                "sso:GetProfile",
+                "sso:ListDirectoryAssociations",
+                "sso:ListProfiles",
+                "sso:ListProfileAssociations"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "PermissionsToManagePolicy",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreatePolicy",
+                "iam:DeletePolicy",
+                "iam:GetPolicy",
+                "iam:GetPolicyVersion",
+                "iam:ListPolicyVersions",
+                "iam:AttachRolePolicy",
+                "iam:ListEntitiesForPolicy",
+                "iam:DetachRolePolicy"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "PermissionsToManageRole",
+            "Effect": "Allow",
+            "Action": [
+                "iam:GetRole",
+                "iam:ListInstanceProfilesForRole",
+                "iam:PassRole",
+                "iam:ListAttachedRolePolicies",
+                "iam:CreateRole",
+                "iam:DeleteRole",
+                "iam:ListRolePolicies"
+            ],
+            "Resource": "arn:aws:iam::${AWS-Account#}:role/tf-grafana-assume"
+        }
+    ]
+}
